@@ -13,14 +13,14 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.threedlinkweb.petclinic.owner;
+package com.threedlinkweb.petclinic.owner.domain;
 
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Objects;
 
 import org.springframework.core.style.ToStringCreator;
-import com.threedlinkweb.petclinic.model.Person;
+import com.threedlinkweb.petclinic.shared.domain.Person;
 import org.springframework.util.Assert;
 
 import jakarta.persistence.CascadeType;

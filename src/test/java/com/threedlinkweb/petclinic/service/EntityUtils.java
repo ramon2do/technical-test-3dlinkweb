@@ -17,7 +17,7 @@
 package com.threedlinkweb.petclinic.service;
 
 import org.springframework.orm.ObjectRetrievalFailureException;
-import com.threedlinkweb.petclinic.model.BaseEntity;
+import com.threedlinkweb.petclinic.shared.domain.BaseEntity;
 
 import java.util.Collection;
 
@@ -27,7 +27,7 @@ import java.util.Collection;
  *
  * @author Juergen Hoeller
  * @author Sam Brannen
- * @see com.threedlinkweb.petclinic.model.BaseEntity
+ * @see BaseEntity
  * @since 29.10.2003
  */
 public abstract class EntityUtils {

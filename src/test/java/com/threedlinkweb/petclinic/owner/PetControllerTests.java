@@ -16,6 +16,11 @@
 
 package com.threedlinkweb.petclinic.owner;
 
+import com.threedlinkweb.petclinic.owner.domain.Owner;
+import com.threedlinkweb.petclinic.owner.domain.Pet;
+import com.threedlinkweb.petclinic.owner.domain.PetType;
+import com.threedlinkweb.petclinic.owner.infrastructure.OwnerRepository;
+import com.threedlinkweb.petclinic.owner.infrastructure.PetTypeRepository;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Nested;
 import org.junit.jupiter.api.Test;
