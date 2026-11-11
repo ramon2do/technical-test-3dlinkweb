@@ -63,6 +63,7 @@ http://localhost:8080/swagger-ui.html
 | POST | /api/v1/owners | Crear nuevo propietario |
 | PUT | /api/v1/owners/{id} | Actualizar propietario |
 | DELETE | /api/v1/owners/{id} | Eliminar propietario |
+| GET | /api/v1/pet-types | Listar tipos de mascota |
 | GET | /api/v1/pets/owner/{ownerId} | Listar mascotas por propietario |
 | GET | /api/v1/pets/{id} | Obtener mascota por ID |
 | POST | /api/v1/pets | Crear nueva mascota |
@@ -74,6 +75,53 @@ http://localhost:8080/swagger-ui.html
 | DELETE | /api/v1/visits/{id} | Eliminar visita |
 | GET | /api/v1/vets | Listar todos los veterinarios |
 | GET | /api/v1/vets/{id} | Obtener veterinario por ID |
+
+## Ejemplos de Uso (cURL)
+
+A continuación se muestran ejemplos prácticos para probar la API desde la terminal.
+
+### 1. Crear un Propietario (POST)
+curl -X POST http://localhost:8080/api/v1/owners \
+-H "Content-Type: application/json" \
+-d '{
+"firstName": "Juan",
+"lastName": "Perez",
+"address": "Calle Falsa 123",
+"city": "Springfield",
+"telephone": "1234567890"
+}'
+
+Respuesta esperada (201 Created):
+{
+"id": 3,
+"firstName": "Juan",
+"lastName": "Perez",
+"address": "Calle Falsa 123",
+"city": "Springfield",
+"telephone": "1234567890"
+}
+
+### 2. Consultar un Propietario por ID (GET)
+curl -X GET http://localhost:8080/api/v1/owners/1
+
+Respuesta esperada (200 OK):
+{
+"id": 1,
+"firstName": "George",
+"lastName": "Franklin",
+"address": "110 W. Liberty St.",
+"city": "Madison",
+"telephone": "6085551023"
+}
+
+### 3. Listar Tipos de Mascota (GET)
+curl -X GET http://localhost:8080/api/v1/pet-types
+
+Respuesta esperada (200 OK):
+[
+{ "id": 1, "name": "cat" },
+{ "id": 2, "name": "dog" }
+]
 
 ## Documentación Adicional
 
