@@ -21,8 +21,8 @@ import java.util.List;
 import java.util.Set;
 import java.util.stream.Collectors;
 
-import com.threedlinkweb.petclinic.model.NamedEntity;
-import com.threedlinkweb.petclinic.model.Person;
+import com.threedlinkweb.petclinic.shared.domain.NamedEntity;
+import com.threedlinkweb.petclinic.shared.domain.Person;
 
 import jakarta.persistence.Entity;
 import jakarta.persistence.FetchType;

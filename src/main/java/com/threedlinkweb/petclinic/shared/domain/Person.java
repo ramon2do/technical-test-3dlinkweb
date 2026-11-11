@@ -13,39 +13,45 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.threedlinkweb.petclinic.model;
+package com.threedlinkweb.petclinic.shared.domain;
 
-import java.io.Serializable;
-
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.Id;
+import jakarta.persistence.Column;
 import jakarta.persistence.MappedSuperclass;
+import jakarta.validation.constraints.NotBlank;
+import jakarta.validation.constraints.Size;
 
 /**
- * Simple JavaBean domain object with an id property. Used as a base class for objects
- * needing this property.
+ * Simple JavaBean domain object representing an person.
  *
  * @author Ken Krebs
- * @author Juergen Hoeller
  */
 @MappedSuperclass
-public class BaseEntity implements Serializable {
+public class Person extends BaseEntity {
 
-	@Id
-	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	private Integer id;
+	@Column(length = 30)
+	@Size(max = 30)
+	@NotBlank
+	private String firstName;
 
-	public Integer getId() {
-		return id;
+	@Column(length = 30)
+	@Size(max = 30)
+	@NotBlank
+	private String lastName;
+
+	public String getFirstName() {
+		return this.firstName;
 	}
 
-	public void setId(Integer id) {
-		this.id = id;
+	public void setFirstName(String firstName) {
+		this.firstName = firstName;
 	}
 
-	public boolean isNew() {
-		return this.id == null;
+	public String getLastName() {
+		return this.lastName;
+	}
+
+	public void setLastName(String lastName) {
+		this.lastName = lastName;
 	}
 
 }

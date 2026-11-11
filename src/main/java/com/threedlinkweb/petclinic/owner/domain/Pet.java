@@ -13,7 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.threedlinkweb.petclinic.owner;
+package com.threedlinkweb.petclinic.owner.domain;
 
 import java.time.LocalDate;
 import java.util.Collection;
@@ -21,7 +21,7 @@ import java.util.LinkedHashSet;
 import java.util.Set;
 
 import org.springframework.format.annotation.DateTimeFormat;
-import com.threedlinkweb.petclinic.model.NamedEntity;
+import com.threedlinkweb.petclinic.shared.domain.NamedEntity;
 
 import jakarta.persistence.CascadeType;
 import jakarta.persistence.Column;

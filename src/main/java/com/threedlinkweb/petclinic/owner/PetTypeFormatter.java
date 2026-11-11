@@ -15,6 +15,8 @@
  */
 package com.threedlinkweb.petclinic.owner;
 
+import com.threedlinkweb.petclinic.owner.domain.PetType;
+import com.threedlinkweb.petclinic.owner.infrastructure.PetTypeRepository;
 import org.springframework.format.Formatter;
 import org.springframework.stereotype.Component;
 

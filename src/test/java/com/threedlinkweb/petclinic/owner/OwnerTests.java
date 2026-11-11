@@ -15,6 +15,8 @@
  */
 package com.threedlinkweb.petclinic.owner;
 
+import com.threedlinkweb.petclinic.owner.domain.Owner;
+import com.threedlinkweb.petclinic.owner.domain.Pet;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;

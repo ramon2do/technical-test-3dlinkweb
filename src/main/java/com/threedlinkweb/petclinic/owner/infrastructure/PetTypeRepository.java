@@ -14,10 +14,11 @@
  * limitations under the License.
  */
 
-package com.threedlinkweb.petclinic.owner;
+package com.threedlinkweb.petclinic.owner.infrastructure;
 
 import java.util.List;
 
+import com.threedlinkweb.petclinic.owner.domain.PetType;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Query;
 

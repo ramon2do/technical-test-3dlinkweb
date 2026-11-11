@@ -13,10 +13,11 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.threedlinkweb.petclinic.owner;
+package com.threedlinkweb.petclinic.owner.infrastructure;
 
 import java.util.Optional;
 
+import com.threedlinkweb.petclinic.owner.domain.Owner;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 import org.springframework.data.jpa.repository.JpaRepository;

@@ -16,6 +16,8 @@
 
 package com.threedlinkweb.petclinic.owner;
 
+import com.threedlinkweb.petclinic.owner.domain.Pet;
+import com.threedlinkweb.petclinic.owner.domain.PetType;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Nested;
 import org.junit.jupiter.api.Test;

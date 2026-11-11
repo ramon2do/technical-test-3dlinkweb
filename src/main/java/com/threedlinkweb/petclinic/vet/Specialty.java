@@ -15,7 +15,7 @@
  */
 package com.threedlinkweb.petclinic.vet;
 
-import com.threedlinkweb.petclinic.model.NamedEntity;
+import com.threedlinkweb.petclinic.shared.domain.NamedEntity;
 
 import jakarta.persistence.Entity;
 import jakarta.persistence.Table;

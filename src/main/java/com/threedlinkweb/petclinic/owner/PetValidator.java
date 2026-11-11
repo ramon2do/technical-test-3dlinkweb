@@ -15,6 +15,7 @@
  */
 package com.threedlinkweb.petclinic.owner;
 
+import com.threedlinkweb.petclinic.owner.domain.Pet;
 import org.springframework.util.StringUtils;
 import org.springframework.validation.Errors;
 import org.springframework.validation.Validator;
