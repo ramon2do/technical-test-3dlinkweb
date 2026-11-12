@@ -35,6 +35,12 @@ Para más detalles sobre las decisiones arquitectónicas (DDD, agrupación de en
 - Maven (o usar el wrapper incluido ./mvnw).
 - Docker (opcional, para base de datos persistente).
 
+## Configuración del Entorno
+
+- Variables de entorno: No se requieren variables de entorno obligatorias. La aplicación usa la configuración por defecto de Spring Boot.
+- Base de Datos: Se utiliza H2 en memoria. Hibernate crea el esquema automáticamente (ddl-auto=update) y el archivo data.sql puebla los datos de prueba al iniciar.
+- Puerto: La aplicación escucha en el puerto 8080 por defecto.
+
 ## Perfiles de Spring
 
 La aplicación utiliza el perfil por defecto de Spring Boot, configurado para usar una base de datos H2 en memoria. Esto permite ejecutar la aplicación sin necesidad de instalar un motor de base de datos externo.
@@ -62,6 +68,12 @@ http://localhost:8080/swagger-ui.html
 
 ### 4. Ejecutar las pruebas
 ./mvnw test
+
+## Especificación OpenAPI
+
+La especificación completa de la API está disponible en:
+- En vivo: http://localhost:8080/v3/api-docs (con la aplicación en ejecución).
+- Archivo estático: docs/openapi.json (incluido en el repositorio).
 
 ## Endpoints Principales
 
@@ -186,6 +198,7 @@ La base de datos H2 es en memoria, por lo que se recrea y repuebla automáticame
 - Plan de Migración: docs/03-plan-migracion.md
 - Bitácora de Uso de IA: docs/04-uso-ia.md
 - Colección de Postman: docs/petclinic-api.postman_collection.json
+- Especificación OpenAPI: docs/openapi.json
 
 ## Licencia
 
