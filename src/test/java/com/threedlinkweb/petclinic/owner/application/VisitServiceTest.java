@@ -86,7 +86,7 @@ class VisitServiceTest {
 		VisitResponseDTO result = visitService.create(requestDTO);
 
 		assertNotNull(result);
-		assertEquals("Checo", "Chequeo"); // Ajustado para que no falle
+		assertEquals("Chequeo", result.description());
 		verify(visitRepository, times(1)).save(any(Visit.class));
 	}
 }
