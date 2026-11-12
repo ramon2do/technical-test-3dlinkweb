@@ -1,0 +1,173 @@
+{
+  "info": {
+    "name": "PetClinic API - Technical Test",
+    "description": "Colección de pruebas para la API REST de PetClinic (Technical Test 3DLinkWeb)",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "Owners",
+      "item": [
+        {
+          "name": "Listar todos los propietarios",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:8080/api/v1/owners",
+              "protocol": "http",
+              "host": ["localhost"],
+              "port": "8080",
+              "path": ["api", "v1", "owners"]
+            }
+          }
+        },
+        {
+          "name": "Obtener propietario por ID",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:8080/api/v1/owners/1",
+              "protocol": "http",
+              "host": ["localhost"],
+              "port": "8080",
+              "path": ["api", "v1", "owners", "1"]
+            }
+          }
+        },
+        {
+          "name": "Crear propietario",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"firstName\": \"Juan\",\n  \"lastName\": \"Perez\",\n  \"address\": \"Calle Falsa 123\",\n  \"city\": \"Springfield\",\n  \"telephone\": \"1234567890\"\n}"
+            },
+            "url": {
+              "raw": "http://localhost:8080/api/v1/owners",
+              "protocol": "http",
+              "host": ["localhost"],
+              "port": "8080",
+              "path": ["api", "v1", "owners"]
+            }
+          }
+        }
+      ]
+    },
+    {
+      "name": "Pets",
+      "item": [
+        {
+          "name": "Listar mascotas por dueño",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:8080/api/v1/pets/owner/1",
+              "protocol": "http",
+              "host": ["localhost"],
+              "port": "8080",
+              "path": ["api", "v1", "pets", "owner", "1"]
+            }
+          }
+        },
+        {
+          "name": "Crear mascota",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"name\": \"Rocky\",\n  \"birthDate\": \"2020-05-15\",\n  \"typeId\": 2,\n  \"ownerId\": 1\n}"
+            },
+            "url": {
+              "raw": "http://localhost:8080/api/v1/pets",
+              "protocol": "http",
+              "host": ["localhost"],
+              "port": "8080",
+              "path": ["api", "v1", "pets"]
+            }
+          }
+        }
+      ]
+    },
+    {
+      "name": "Visits",
+      "item": [
+        {
+          "name": "Registrar visita",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"date\": \"2025-01-15\",\n  \"description\": \"Vacunación anual\",\n  \"petId\": 1\n}"
+            },
+            "url": {
+              "raw": "http://localhost:8080/api/v1/visits",
+              "protocol": "http",
+              "host": ["localhost"],
+              "port": "8080",
+              "path": ["api", "v1", "visits"]
+            }
+          }
+        }
+      ]
+    },
+    {
+      "name": "Vets",
+      "item": [
+        {
+          "name": "Listar veterinarios",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:8080/api/v1/vets",
+              "protocol": "http",
+              "host": ["localhost"],
+              "port": "8080",
+              "path": ["api", "v1", "vets"]
+            }
+          }
+        }
+      ]
+    },
+    {
+      "name": "Pet Types",
+      "item": [
+        {
+          "name": "Listar tipos de mascota",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:8080/api/v1/pet-types",
+              "protocol": "http",
+              "host": ["localhost"],
+              "port": "8080",
+              "path": ["api", "v1", "pet-types"]
+            }
+          }
+        }
+      ]
+    }
+  ]
+}
